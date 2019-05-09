@@ -12,8 +12,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private String[] mDataset;
+    private ArrayList<MyData> mDataset;
 
 
 
@@ -27,18 +29,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public TextView TextView_content;
         public ImageView ImageView_title;
 
-        public MyViewHolder(View v) {
-            super(v);
+        public MyViewHolder(View view) {
+            super(view);
 
-            TextView_title = v.findViewById(R.id.TextView_title);
-            TextView_content = v.findViewById(R.id.TextView_content);
-            ImageView_title = v.findViewById(R.id.ImageView_title);
+            TextView_title = view.findViewById(R.id.TextView_title);
+            TextView_content = view.findViewById(R.id.TextView_content);
+            ImageView_title = view.findViewById(R.id.ImageView_title);
         }
 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
+    public MyAdapter(ArrayList<MyData> myDataset) {
         mDataset = myDataset;
     }
 
@@ -47,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
         // create a new view
-        LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
+        View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_cardview, parent, false);
 
         MyViewHolder vh = new MyViewHolder(v);
@@ -59,14 +61,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.TextView_title.setText(mDataset[position]);
+        holder.TextView_title.setText(mDataset.get(position).text);
+        holder.TextView_content.setText(mDataset.get(position).text2);
+        holder.ImageView_title.setImageResource(mDataset.get(position).img);
 
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+
+        return mDataset.size();
     }
 
+
+
+}
+class MyData{
+    public String text,text2;
+    public int img;
+    public MyData(String text,String text2, int img){
+        this.text=text;
+        this.text2=text2;
+        this.img=img;
+    }
 }
