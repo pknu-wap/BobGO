@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private ArrayList<MyData> mDataset;
+    private static View.OnClickListener onClickListener;
 
 
 
@@ -28,6 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public TextView TextView_title;
         public TextView TextView_content;
         public ImageView ImageView_title;
+        public View LinearLayout_Click;
 
         public MyViewHolder(View view) {
             super(view);
@@ -35,13 +38,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             TextView_title = view.findViewById(R.id.TextView_title);
             TextView_content = view.findViewById(R.id.TextView_content);
             ImageView_title = view.findViewById(R.id.ImageView_title);
+            LinearLayout_Click = view.findViewById(R.id.LinearLayout_Click);
+
+            LinearLayout_Click.setClickable(true);
+            LinearLayout_Click.setEnabled(true);
+            LinearLayout_Click.setOnClickListener(onClickListener);
         }
 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(ArrayList<MyData> myDataset) {
+    public MyAdapter(ArrayList<MyData> myDataset,View.OnClickListener onClick) {
+
         mDataset = myDataset;
+        onClickListener = onClick;
     }
 
     // Create new views (invoked by the layout manager)
@@ -64,8 +74,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.TextView_title.setText(mDataset.get(position).text);
         holder.TextView_content.setText(mDataset.get(position).text2);
         holder.ImageView_title.setImageResource(mDataset.get(position).img);
-
-    }
+        holder.LinearLayout_Click.setTag(position);
+   }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override

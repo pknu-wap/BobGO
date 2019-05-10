@@ -34,7 +34,13 @@ public class MainActivity extends Activity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new MyAdapter(myDataset, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, profileActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(mAdapter);
 
         myDataset.add(new MyData("최대윤","부산 남구 대연동",R.drawable.backmac));
