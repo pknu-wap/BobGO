@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:src="@drawable/mini"
+        android:src="@drawable/bobgotyping"
         app:civ_border_color="#FFffffff"
         app:civ_border_width="2dp" />
 
@@ -33,7 +33,7 @@
         android:paddingBottom="16dp">
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -45,23 +45,23 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/profile_uni"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvName"
+            android:layout_below="@id/profile_name"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lines="2"
-            android:text="부산광역시 남구 대연동"
+            android:text="부경대학교"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvEducation"
+            android:id="@+id/profile_sex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvTitle"
+            android:layout_below="@id/profile_uni"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="4dp"
             android:fontFamily="sans-serif-light"
@@ -69,28 +69,28 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvAddress"
+            android:id="@+id/profile_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvEducation"
+            android:layout_below="@id/profile_sex"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-light"
-            android:text="학생"
+            android:text="20세"
             android:textSize="16sp" />
 
         <Space
             android:id="@+id/spaceHolder"
             android:layout_width="10dp"
             android:layout_height="0dp"
-            android:layout_below="@id/tvEducation"
+            android:layout_below="@id/profile_sex"
             android:layout_centerHorizontal="true" />
 
         <Button
-            android:id="@+id/btnMessage"
+            android:id="@+id/profile_message"
             android:layout_width="110dp"
             android:layout_height="40dp"
-            android:layout_below="@id/tvAddress"
+            android:layout_below="@id/profile_age"
             android:layout_marginBottom="16dp"
             android:layout_toStartOf="@id/spaceHolder"
             android:layout_toLeftOf="@id/spaceHolder"
@@ -107,7 +107,7 @@
         <Button
             android:layout_width="110dp"
             android:layout_height="40dp"
-            android:layout_below="@id/tvAddress"
+            android:layout_below="@id/profile_age"
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@id/spaceHolder"
             android:layout_toRightOf="@id/spaceHolder"
@@ -122,17 +122,18 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tvSummary"
+            android:id="@+id/profile_introduce"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnMessage"
+            android:layout_below="@id/profile_message"
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lines="2"
-            android:text="자기소개"
+            android:text="빵갑습니다!"
             android:textSize="14sp" />
+
     </RelativeLayout>
 
 

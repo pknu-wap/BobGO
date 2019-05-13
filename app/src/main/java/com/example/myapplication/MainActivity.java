@@ -1,18 +1,13 @@
 package com.example.myapplication;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Dictionary;
 
 public class MainActivity extends Activity {
 
@@ -20,6 +15,10 @@ public class MainActivity extends Activity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<MyData> myDataset;
+    private String[] name={"최대윤","김동현","박충현","이지영","나영석"};
+    private String[] uni={"부경대학교","울산대학교","중앙대학교","서울대학교","서강대학교"};
+    private String[] sex={"남자","여자"};
+    private String[] age={"20세","24세","22세","21세","25세"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +42,11 @@ public class MainActivity extends Activity {
         });
         recyclerView.setAdapter(mAdapter);
 
-        myDataset.add(new MyData("최대윤","부산 남구 대연동",R.drawable.backmac));
-        myDataset.add(new MyData("김동현","울산 남구 신정동",R.drawable.mini));
-        myDataset.add(new MyData("박충현","서울 용산구 한남동",R.drawable.toystory));
-        myDataset.add(new MyData("이지영","부산 부산진구 부전동",R.drawable.insideout));
-        myDataset.add(new MyData("나영석","부산 수영구 광안동",R.drawable.backmac));
+        myDataset.add(new MyData(name[0],uni[0],sex[0],age[0],R.drawable.bobgotyping));
+        myDataset.add(new MyData(name[1],uni[1],sex[0],age[1],R.drawable.bobgotyping));
+        myDataset.add(new MyData(name[2],uni[2],sex[0],age[2],R.drawable.bobgotyping));
+        myDataset.add(new MyData(name[3],uni[3],sex[1],age[3],R.drawable.bobgotyping));
+        myDataset.add(new MyData(name[4],uni[4],sex[0],age[4],R.drawable.bobgotyping));
 
 
 
