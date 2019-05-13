@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class profileActivity extends Activity {
+public class profile_Activity extends Activity {
 
 
     private TextView profile_name;

@@ -15,21 +15,21 @@
 
 
         <LinearLayout
-            android:id="@+id/LinearLayout_Click"
+            android:id="@+id/list_LinearLayout_Click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/press"
+            android:background="@drawable/list_press_gray"
             android:clickable="true"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/ImageView_title"
+                android:id="@+id/list_ImageView_title"
                 android:layout_width="107dp"
                 android:layout_height="120dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
-                android:src="@drawable/bobgotyping"
+                android:src="@drawable/list_bobgotyping"
                 app:civ_border_color="@android:color/darker_gray"
                 app:civ_border_width="2dp" />
 
@@ -41,7 +41,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/TextView_name"
+                    android:id="@+id/list_TextView_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -52,7 +52,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/TextView_uni"
+                    android:id="@+id/list_TextView_uni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -62,7 +62,7 @@
                     android:text="Text"
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/TextView_sex"
+                    android:id="@+id/list_TextView_sex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -72,7 +72,7 @@
                     android:text="Text"
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/TextView_age"
+                    android:id="@+id/list_TextView_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -82,7 +82,7 @@
                     android:text="Text"
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/TextView_selfintro"
+                    android:id="@+id/list_TextView_selfintro"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                      />
