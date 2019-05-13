@@ -27,20 +27,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         // each data item is just a string in this case
-        public TextView TextView_title;
-        public TextView TextView_content1;
-        public TextView TextView_content2;
-        public TextView TextView_content3;
+        public TextView TextView_name;
+        public TextView TextView_uni;
+        public TextView TextView_sex;
+        public TextView TextView_age;
+        public TextView TextView_selfintro;
         public ImageView ImageView_title;
         public View LinearLayout_Click;
 
         public MyViewHolder(View view) {
             super(view);
 
-            TextView_title = view.findViewById(R.id.TextView_title);
-            TextView_content1 = view.findViewById(R.id.TextView_content1);
-            TextView_content2 = view.findViewById(R.id.TextView_content2);
-            TextView_content3 = view.findViewById(R.id.TextView_content3);
+            TextView_name = view.findViewById(R.id.TextView_name);
+            TextView_uni = view.findViewById(R.id.TextView_uni);
+            TextView_sex = view.findViewById(R.id.TextView_sex);
+            TextView_age = view.findViewById(R.id.TextView_age);
+            TextView_selfintro = view.findViewById(R.id.TextView_selfintro);
             ImageView_title = view.findViewById(R.id.ImageView_title);
             LinearLayout_Click = view.findViewById(R.id.LinearLayout_Click);
 
@@ -75,10 +77,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.TextView_title.setText(mDataset.get(position).name);
-        holder.TextView_content1.setText(mDataset.get(position).uni);
-        holder.TextView_content2.setText(mDataset.get(position).sex);
-        holder.TextView_content3.setText(mDataset.get(position).age);
+        holder.TextView_name.setText(mDataset.get(position).name);
+        holder.TextView_uni.setText(mDataset.get(position).uni);
+        holder.TextView_sex.setText(mDataset.get(position).sex);
+        holder.TextView_age.setText(mDataset.get(position).age);
+        holder.TextView_selfintro.setText(mDataset.get(position).selfintro);
         holder.ImageView_title.setImageResource(mDataset.get(position).img);
         holder.LinearLayout_Click.setTag(position);
    }
@@ -94,13 +97,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 }
 class MyData{
-    public String name,uni,sex,age;
+    public String name,uni,sex,age,selfintro;
     public int img;
-    public MyData(String name,String uni,String sex,String age, int img){
+    public MyData(String name,String uni,String sex,String age,String selfintro, int img){
         this.name=name;
         this.uni=uni;
         this.sex=sex;
         this.age=age;
+        this.selfintro=selfintro;
         this.img=img;
     }
 }

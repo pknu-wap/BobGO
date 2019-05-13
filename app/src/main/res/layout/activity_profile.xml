@@ -40,7 +40,7 @@
             android:layout_marginTop="18dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif"
-            android:text="최대윤"
+            android:text="이름"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
 
@@ -54,7 +54,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lines="2"
-            android:text="부경대학교"
+            android:text="대학교"
             android:textSize="16sp" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="4dp"
             android:fontFamily="sans-serif-light"
-            android:text="남자"
+            android:text="성별"
             android:textSize="16sp" />
 
         <TextView
@@ -76,7 +76,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-light"
-            android:text="20세"
+            android:text="나이"
             android:textSize="16sp" />
 
         <Space
@@ -122,7 +122,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/profile_introduce"
+            android:id="@+id/profile_selfintro"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_message"
@@ -131,7 +131,7 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lines="2"
-            android:text="빵갑습니다!"
+            android:text="자기소개"
             android:textSize="14sp" />
 
     </RelativeLayout>

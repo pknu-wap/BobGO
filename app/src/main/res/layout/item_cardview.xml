@@ -41,7 +41,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/TextView_title"
+                    android:id="@+id/TextView_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -52,7 +52,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/TextView_content1"
+                    android:id="@+id/TextView_uni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -62,7 +62,7 @@
                     android:text="Text"
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/TextView_content2"
+                    android:id="@+id/TextView_sex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -72,7 +72,7 @@
                     android:text="Text"
                     android:textSize="15dp" />
                 <TextView
-                    android:id="@+id/TextView_content3"
+                    android:id="@+id/TextView_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -81,6 +81,11 @@
                     android:paddingRight="25dp"
                     android:text="Text"
                     android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/TextView_selfintro"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                     />
             </LinearLayout>
 
 
