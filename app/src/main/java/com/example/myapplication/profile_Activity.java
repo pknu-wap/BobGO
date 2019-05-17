@@ -30,13 +30,13 @@ public class profile_Activity extends Activity {
         profile_age=findViewById(R.id.profile_age);
         profile_selfintro=findViewById(R.id.profile_selfintro);
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        String name = bundle.getString("name");
-        String uni = bundle.getString("uni");
-        String age = bundle.getString("age");
-        String sex = bundle.getString("sex");
-        String selfintro = bundle.getString("selfintro");
+        Intent profile_intent = getIntent();
+        Bundle profile_bundle = profile_intent.getExtras();
+        String name = profile_bundle.getString("name");
+        String uni = profile_bundle.getString("uni");
+        String age = profile_bundle.getString("age");
+        String sex = profile_bundle.getString("sex");
+        String selfintro = profile_bundle.getString("selfintro");
 
         profile_name.setText(name);
         profile_uni.setText(uni);
