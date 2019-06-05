@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Testing">
+        <SwitchPreference
+            android:key="message"
+            android:title="Msg Alert"/>
+
+        <PreferenceScreen
+            android:key="keyword_screen"
+            android:title="Keyword Alert"
+            android:summary="No Use">
+
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="keyword"
+                android:summary="등록된 키워드"
+                android:title="Keyword Alert"/>
+            <ListPreference
+                android:entries="@array/array_voice"
+                android:entryValues="@array/array_voice"
+                android:key="keyword_list"
+                android:summary="1번"
+                android:title="키워드 전용 알림음"
+                android:dependency="keyword"
+                />
+
+
+
+        </PreferenceScreen>
+
+        <SwitchPreference
+            android:key="sound"
+            android:title="소리"/>
+
+
+
+        <ListPreference
+            android:entries="@array/array_voice"
+            android:entryValues="@array/array_voice"
+
+            android:key="sound_list"
+            android:summary="1번"
+            android:title="알림음음"
+            />
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
+    <!-- ListPreference는 entries의 값을 통해 조정하기 위해 summary를 붙여 요약
+        미리 보는 용도라고 보는게 맞다(아마)
+        edittext는 잘 모르겠고 checkbox는 그냥 저 형태대로 키부여 및
+        타이틀만 조정해주고 세부 내용을 만들어주면 정상 작동할 것.
+        체크박스는 on/off형식이니까 true/false값을 받아서 형태에 맞게 변형하는
+        뭐 그런.
+        -->
