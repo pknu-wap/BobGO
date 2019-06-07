@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+
+    <ImageView
+        android:id="@+id/im_Food"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/foodreal"/>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/tv_ID"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="bottom"
+        android:text="ID"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/et_ID"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_ID"
+        android:hint="아이디를 입력하세요."/>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/tv_PW"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="bottom"
+        android:text="PW"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/et_PW"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:password="true"
+        android:hint="비밀번호를 입력하세요."
+        android:layout_toRightOf="@+id/tv_PW"/>
+
+
+</RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인" />
+
+        <TextView
+            android:id="@+id/TV_space"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_Login"/>
+
+
+        <Button
+            android:id="@+id/btn_Join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/TV_space"
+            android:text="회원가입"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
