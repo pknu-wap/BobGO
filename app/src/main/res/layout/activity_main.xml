@@ -17,9 +17,9 @@
     <Button
         android:id="@+id/btn_touch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="258dp"
         android:background="#FFFFFF"
-        android:text="이곳을 터치하세요!"/>
+        android:text="이곳을 터치하세요!" />
 
 
 

@@ -20,6 +20,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //로그인 메인화면
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -32,26 +34,24 @@ public class LoginActivity extends AppCompatActivity {
 
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //로그인 버튼
                 //Intent intent = new Intent(LoginActivity.this, SubActivity.class);
                 //startActivity(intent);
-
-
-
             }
         });
         btn_Join.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //회원가입버튼
                 Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
                 startActivity(intent);
             }
         });
+
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, list_Adapter.class);
-                startActivity(intent);
+               // Intent intent = new Intent(LoginActivity.this, list_Adapter.class);
+               // startActivity(intent);
             }
         });
     }
