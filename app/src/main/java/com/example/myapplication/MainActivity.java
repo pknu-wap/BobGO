@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
+//activity main 메인화면
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_touch;

@@ -63,8 +63,8 @@ public class JoinActivity extends AppCompatActivity {
                                         .setPositiveButton("확인",null)
                                         .create()
                                         .show();
-                       //         Intent intent = new Intent(JoinActivity.this, loginOn.class);
-                    //            JoinActivity.this.startActivity(intent);
+                                Intent intent = new Intent(JoinActivity.this, LoginActivity.class);
+                                JoinActivity.this.startActivity(intent);
                             }
                             else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
@@ -75,7 +75,11 @@ public class JoinActivity extends AppCompatActivity {
 
                             }
                         } catch (JSONException e) {
-                            e.printStackTrace();
+                            AlertDialog.Builder builder = new AlertDialog.Builder(JoinActivity.this);
+                            builder.setMessage("회원 등록에 실패했습니다..")
+                                    .setNegativeButton("다시시도",null)
+                                    .create()
+                                    .show();
                         }
                     }
                 };
@@ -89,7 +93,7 @@ public class JoinActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JoinActivity.this, MainActivity.class);
+                Intent intent = new Intent(JoinActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
