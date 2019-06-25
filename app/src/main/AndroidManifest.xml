@@ -15,6 +15,9 @@
         <activity android:name=".list_recycler_Activity">
 
         </activity>
+        <activity android:name=".loginOn">
+
+        </activity>
 
         <activity android:name=".profile_Activity">
 
