@@ -35,8 +35,8 @@ public class JoinActivity extends AppCompatActivity {
         final EditText idText = (EditText) findViewById(R.id.idText);
         final EditText passwordText = (EditText) findViewById(R.id.passwordText);
         final EditText nameText = (EditText) findViewById(R.id.nameText);
-        final EditText stdText = (EditText) findViewById(R.id.stdText);
-        final EditText nickText = (EditText) findViewById(R.id.nickText);
+        final EditText ageText = (EditText) findViewById(R.id.stdText);
+        final EditText universityText = (EditText) findViewById(R.id.nickText);
 
 
         btn_confirm = findViewById(R.id.btn_confirm); //확인
@@ -49,8 +49,8 @@ public class JoinActivity extends AppCompatActivity {
                 String userID = idText.getText().toString();
                 String userPassword = passwordText.getText().toString();
                 String userName = nameText.getText().toString();
-                int userSTUID = Integer.parseInt(nickText.getText().toString());
-                String userNID = nameText.getText().toString();
+                int userAge = Integer.parseInt(ageText.getText().toString());
+                String userUniversity = universityText.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     public void onResponse(String response) {
@@ -83,7 +83,7 @@ public class JoinActivity extends AppCompatActivity {
                         }
                     }
                 };
-                RegisterRequest registerRequest = new RegisterRequest(userID, userPassword, userName, userSTUID, userNID, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(userID, userPassword, userName, userAge, userUniversity, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(JoinActivity.this);
                 queue.add(registerRequest);
 
@@ -93,7 +93,7 @@ public class JoinActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JoinActivity.this, LoginActivity.class);
+                Intent intent = new Intent(JoinActivity.this, profile_Activity.class);
                 startActivity(intent);
             }
         });

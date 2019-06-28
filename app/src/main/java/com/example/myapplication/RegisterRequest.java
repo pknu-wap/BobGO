@@ -16,8 +16,8 @@ public class RegisterRequest extends StringRequest {
         parameters.put("userID", userID);
         parameters.put("userPassword", userPassword);
         parameters.put("userName", userName);
-        parameters.put("userSTUID", userSTUID + "");
-        parameters.put("userNID", userNick);
+        parameters.put("userAge", userSTUID + "");
+        parameters.put("userUniversity", userNick);
     }
     @Override
     public Map<String, String> getParams(){

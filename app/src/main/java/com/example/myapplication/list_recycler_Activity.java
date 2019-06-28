@@ -7,6 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class list_recycler_Activity extends Activity {
@@ -26,13 +29,37 @@ public class list_recycler_Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_recycler);
 
-        list_recyclerView=findViewById(R.id.list_recycler_view);
+        list_recyclerView=findViewById(R.id.list_recycler_view); //activity_list_recycler 의 리스트 뷰
 
         list_recyclerView.setHasFixedSize(true);
 
         listDataset = new ArrayList<>();
         list_layoutManager = new LinearLayoutManager(this);
         list_recyclerView.setLayoutManager(list_layoutManager);
+
+
+        Intent intent = getIntent();
+        try{
+            JSONObject jsonObject = new JSONObject(intent.getStringExtra("userList"));
+            JSONArray jsonArray = jsonObject.getJSONArray("response");
+            int count = 0;
+            String userID, userPassword, userName, userAge, userUniversity;
+            while(count < jsonArray.length()){
+                JSONObject object = jsonArray.getJSONObject(count);
+                userID = object.getString("userID");
+                userPassword = object.getString("userPassword");
+                userName = object.getString("userName");
+                userAge = object.getString("userAge");
+                userUniversity = object.getString("userUniversity");
+                User user = new User(userID, userPassword, userName, userAge, userUniversity);
+
+                count++;
+
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
 
         list_Adapter = new list_Adapter(listDataset, new View.OnClickListener() {
             @Override

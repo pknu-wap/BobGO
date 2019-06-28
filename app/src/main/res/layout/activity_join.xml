@@ -136,7 +136,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:gravity="center"
-            android:text="학번"
+            android:text="나이"
             android:textSize="25dp" />
 
         <EditText
@@ -144,7 +144,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/Tv_Num"
-            android:hint="학번을 입력하세요" />
+            android:hint="나이를 입력하세요" />
 
 
     </RelativeLayout>
@@ -168,7 +168,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:gravity="center"
-            android:text="닉네임"
+            android:text="대학"
             android:textSize="25dp" />
 
         <EditText
@@ -176,7 +176,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/Tv_Nick"
-            android:hint="닉네임을 입력하세요" />
+            android:hint="대학을 입력하세요" />
 
     </RelativeLayout>
 
